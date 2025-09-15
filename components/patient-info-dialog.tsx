@@ -57,7 +57,7 @@ export function PatientInfoDialog({ patient, open, onOpenChange }: PatientInfoDi
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto z-[50]">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-slate-800 flex items-center gap-2">
             <User className="w-6 h-6 text-blue-600" />
