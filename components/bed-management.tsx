@@ -301,20 +301,20 @@ export function BedManagement() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="medical-button-small bg-white/70 backdrop-blur-sm hover:bg-emerald-50 transition-all duration-300 hover:scale-105 border-2 border-emerald-200 text-emerald-700 hover:text-emerald-800"
+                        className="medical-button-small bg-white/80 backdrop-blur-sm hover:bg-emerald-50 transition-all duration-300 hover:scale-105 border-2 border-emerald-200 text-emerald-700 hover:text-emerald-800 flex items-center justify-center"
                         onClick={() => handleAddExpense(bed.id)}
                       >
-                        <Plus className="w-3 h-3 mr-1" />
-                        <span>Expense</span>
+                        <Plus className="w-3 h-3 mr-1 flex-shrink-0" />
+                        <span className="truncate">Expense</span>
                       </Button>
                       <Button
                         variant="outline"
                         size="sm"
-                        className="medical-button-small bg-white/70 backdrop-blur-sm hover:bg-blue-50 transition-all duration-300 hover:scale-105 border-2 border-blue-200 text-blue-700 hover:text-blue-800"
+                        className="medical-button-small bg-white/80 backdrop-blur-sm hover:bg-blue-50 transition-all duration-300 hover:scale-105 border-2 border-blue-200 text-blue-700 hover:text-blue-800 flex items-center justify-center"
                         onClick={() => handleDischargeSummary(bed.id)}
                       >
-                        <FileText className="w-3 h-3 mr-1" />
-                        <span>Discharge</span>
+                        <FileText className="w-3 h-3 mr-1 flex-shrink-0" />
+                        <span className="truncate">Discharge</span>
                       </Button>
                     </div>
                   </div>
