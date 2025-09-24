@@ -200,7 +200,7 @@ export function BedManagement() {
           return (
             <Card
               key={bed.id}
-              className={`relative overflow-hidden transition-all duration-500 hover:shadow-xl hover:scale-105 transform ${
+              className={`professional-bed-card hover:scale-105 ${
                 bed.status === "patient_admitted"
                   ? "bg-gradient-to-br from-red-50 to-rose-100 border-red-200 hover:from-red-100 hover:to-rose-200"
                   : bed.status === "vacant"
