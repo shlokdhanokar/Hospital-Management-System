@@ -159,17 +159,13 @@
     max-width: 100%;
   }
 
-  /* Enhanced navigation description styling to prevent text overflow */
+  /* Enhanced navigation description styling - show full text with better spacing */
   .nav-description {
     @apply text-xs opacity-80 mt-1 leading-relaxed break-words;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 2.5rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.4;
   }
 
   /* Fixed button text alignment and sizing for expense/discharge buttons */
