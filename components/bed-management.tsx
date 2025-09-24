@@ -291,11 +291,11 @@ export function BedManagement() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full bg-white/70 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 hover:scale-105 border-2"
+                      className="w-full bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center"
                       onClick={() => handlePatientInfo(bed.id)}
                     >
-                      <Info className="w-4 h-4 mr-2" />
-                      Patient Info
+                      <Info className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="truncate">Patient Info</span>
                     </Button>
                     <div className="grid grid-cols-2 gap-2">
                       <Button
