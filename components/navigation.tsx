@@ -90,7 +90,7 @@ export function Navigation({ currentSection, onSectionChange }: NavigationProps)
                   key={item.id}
                   variant={isActive ? "default" : "ghost"}
                   className={cn(
-                    "w-full justify-start h-auto p-4 text-left rounded-lg transition-all duration-200",
+                    "w-full justify-start h-auto py-4 px-4 text-left rounded-lg transition-all duration-200 flex items-start",
                     isActive
                       ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-sm"
                       : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-sm",
