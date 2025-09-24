@@ -590,8 +590,8 @@ TOTAL AMOUNT: ₹${totalBill.toLocaleString("en-IN")}`
           </div>
         </div>
 
-        <div className="overflow-y-auto max-h-[calc(98vh-160px)] p-8">
-          <div className="grid grid-cols-1 2xl:grid-cols-2 gap-12">
+        <div className="overflow-y-auto max-h-[calc(95vh-180px)] p-6">
+          <div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 max-w-none">
             {/* Left Side - Patient Information & Summary */}
             <div className="space-y-8">
               {/* Patient Information Card */}
