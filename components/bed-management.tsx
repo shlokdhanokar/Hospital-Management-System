@@ -275,12 +275,14 @@ export function BedManagement() {
                 </div>
 
                 {patient && (
-                  <div className="text-sm text-slate-600 text-center p-2 bg-white/50 rounded-lg backdrop-blur-sm">
-                    <p className="font-medium medical-text-container text-balance flex items-center justify-center gap-1">
-                      <User className="w-3 h-3" />
-                      {patient.name}
+                  <div className="patient-info-container">
+                    <div className="medical-text-container text-balance flex items-center justify-center gap-1 mb-1">
+                      <User className="w-3 h-3 flex-shrink-0" />
+                      <span className="font-medium text-center">{patient.name}</span>
+                    </div>
+                    <p className="medical-text-container text-balance text-slate-500 text-xs text-center leading-relaxed">
+                      {patient.issue}
                     </p>
-                    <p className="text-xs medical-text-container text-balance text-slate-500">{patient.issue}</p>
                   </div>
                 )}
 
