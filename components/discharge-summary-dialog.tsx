@@ -560,7 +560,7 @@ TOTAL AMOUNT: ₹${totalBill.toLocaleString("en-IN")}`
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-[98vw] max-h-[98vh] w-full h-full overflow-hidden z-[60] p-0 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <DialogContent className="max-w-[95vw] max-h-[95vh] w-full h-full overflow-hidden z-[100] p-0 bg-white shadow-2xl border-0">
         <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white p-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
