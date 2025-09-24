@@ -157,6 +157,23 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
+    line-height: 1.5;
+  }
+
+  /* Enhanced patient info container for better text presentation */
+  .patient-info-container {
+    @apply break-words text-sm text-slate-600 leading-relaxed p-3 bg-white/60 rounded-lg backdrop-blur-sm;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  /* Professional card container with better spacing and boundaries */
+  .professional-bed-card {
+    @apply relative overflow-hidden transition-all duration-500 hover:shadow-xl transform;
+    /* Ensure content respects card boundaries */
+    contain: layout;
   }
 
   /* Enhanced navigation description styling - show full text with better spacing */
