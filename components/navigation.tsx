@@ -90,7 +90,7 @@ export function Navigation({ currentSection, onSectionChange }: NavigationProps)
                   key={item.id}
                   variant={isActive ? "default" : "ghost"}
                   className={cn(
-                    "w-full justify-start h-auto py-4 px-4 text-left rounded-lg transition-all duration-200 flex items-start",
+                    "w-full justify-start h-auto p-4 text-left rounded-lg transition-all duration-200",
                     isActive
                       ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-sm"
                       : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-sm",
@@ -101,9 +101,9 @@ export function Navigation({ currentSection, onSectionChange }: NavigationProps)
                   }}
                 >
                   <Icon className="w-5 h-5 mr-4 flex-shrink-0" />
-                  <div className="medical-text-container w-full">
-                    <div className="font-semibold text-sm leading-tight">{item.label}</div>
-                    <div className="nav-description text-xs opacity-80 mt-1 leading-relaxed">{item.description}</div>
+                  <div className="medical-text-container">
+                    <div className="font-semibold text-sm">{item.label}</div>
+                    <div className="nav-description line-clamp-2">{item.description}</div>
                   </div>
                 </Button>
               )

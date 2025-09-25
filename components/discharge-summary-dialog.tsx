@@ -560,29 +560,26 @@ TOTAL AMOUNT: ₹${totalBill.toLocaleString("en-IN")}`
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent 
-        className="max-w-[95vw] max-h-[95vh] w-full h-full overflow-hidden z-[100] p-0 bg-white shadow-2xl border-0 rounded-2xl"
-        showCloseButton={true}
-      >
-        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white p-6 relative overflow-hidden">
+      <DialogContent className="max-w-[98vw] max-h-[98vh] w-full h-full overflow-hidden z-[60] p-0 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white p-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+          <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
           <div className="relative z-10">
             <DialogHeader>
-              <DialogTitle className="text-3xl font-bold flex items-center gap-3 mb-3">
-                <div className="p-2 bg-white/20 rounded-xl backdrop-blur-sm">
-                  <FileText className="w-8 h-8" />
+              <DialogTitle className="text-4xl font-bold flex items-center gap-4 mb-4">
+                <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
+                  <FileText className="w-10 h-10" />
                 </div>
                 Patient Discharge Portal
               </DialogTitle>
-              <div className="flex items-center gap-4 mt-2">
-                <Badge className="bg-white/20 text-white border-white/30 px-3 py-1 text-base">
-                  <User className="w-4 h-4 mr-2" />
+              <div className="flex items-center gap-6 mt-4">
+                <Badge className="bg-white/20 text-white border-white/30 px-4 py-2 text-lg">
+                  <User className="w-5 h-5 mr-2" />
                   {patient?.name}
                 </Badge>
-                <Badge className="bg-white/20 text-white border-white/30 px-3 py-1 text-base">
-                  <Calendar className="w-4 h-4 mr-2" />
+                <Badge className="bg-white/20 text-white border-white/30 px-4 py-2 text-lg">
+                  <Calendar className="w-5 h-5 mr-2" />
                   {patient && new Date().toLocaleDateString("en-IN")}
                 </Badge>
               </div>
@@ -590,8 +587,8 @@ TOTAL AMOUNT: ₹${totalBill.toLocaleString("en-IN")}`
           </div>
         </div>
 
-        <div className="overflow-y-auto max-h-[calc(95vh-180px)] p-6">
-          <div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 max-w-none">
+        <div className="overflow-y-auto max-h-[calc(98vh-160px)] p-8">
+          <div className="grid grid-cols-1 2xl:grid-cols-2 gap-12">
             {/* Left Side - Patient Information & Summary */}
             <div className="space-y-8">
               {/* Patient Information Card */}

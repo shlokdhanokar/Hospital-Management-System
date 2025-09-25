@@ -200,7 +200,7 @@ export function BedManagement() {
           return (
             <Card
               key={bed.id}
-              className={`professional-bed-card hover:scale-105 ${
+              className={`relative overflow-hidden transition-all duration-500 hover:shadow-xl hover:scale-105 transform ${
                 bed.status === "patient_admitted"
                   ? "bg-gradient-to-br from-red-50 to-rose-100 border-red-200 hover:from-red-100 hover:to-rose-200"
                   : bed.status === "vacant"
@@ -275,14 +275,12 @@ export function BedManagement() {
                 </div>
 
                 {patient && (
-                  <div className="patient-info-container">
-                    <div className="medical-text-container text-balance flex items-center justify-center gap-1 mb-1">
-                      <User className="w-3 h-3 flex-shrink-0" />
-                      <span className="font-medium text-center">{patient.name}</span>
-                    </div>
-                    <p className="medical-text-container text-balance text-slate-500 text-xs text-center leading-relaxed">
-                      {patient.issue}
+                  <div className="text-sm text-slate-600 text-center p-2 bg-white/50 rounded-lg backdrop-blur-sm">
+                    <p className="font-medium medical-text-container text-balance flex items-center justify-center gap-1">
+                      <User className="w-3 h-3" />
+                      {patient.name}
                     </p>
+                    <p className="text-xs medical-text-container text-balance text-slate-500">{patient.issue}</p>
                   </div>
                 )}
 
@@ -291,30 +289,30 @@ export function BedManagement() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full bg-white/80 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 hover:scale-105 border-2 flex items-center justify-center"
+                      className="w-full bg-white/70 backdrop-blur-sm hover:bg-white/90 transition-all duration-300 hover:scale-105 border-2"
                       onClick={() => handlePatientInfo(bed.id)}
                     >
-                      <Info className="w-4 h-4 mr-2 flex-shrink-0" />
-                      <span className="truncate">Patient Info</span>
+                      <Info className="w-4 h-4 mr-2" />
+                      Patient Info
                     </Button>
                     <div className="grid grid-cols-2 gap-2">
                       <Button
                         variant="outline"
                         size="sm"
-                        className="medical-button-small bg-white/80 backdrop-blur-sm hover:bg-emerald-50 transition-all duration-300 hover:scale-105 border-2 border-emerald-200 text-emerald-700 hover:text-emerald-800 flex items-center justify-center"
+                        className="medical-button-small bg-white/70 backdrop-blur-sm hover:bg-emerald-50 transition-all duration-300 hover:scale-105 border-2 border-emerald-200 text-emerald-700 hover:text-emerald-800"
                         onClick={() => handleAddExpense(bed.id)}
                       >
-                        <Plus className="w-3 h-3 mr-1 flex-shrink-0" />
-                        <span className="truncate">Expense</span>
+                        <Plus className="w-3 h-3 mr-1" />
+                        <span>Expense</span>
                       </Button>
                       <Button
                         variant="outline"
                         size="sm"
-                        className="medical-button-small bg-white/80 backdrop-blur-sm hover:bg-blue-50 transition-all duration-300 hover:scale-105 border-2 border-blue-200 text-blue-700 hover:text-blue-800 flex items-center justify-center"
+                        className="medical-button-small bg-white/70 backdrop-blur-sm hover:bg-blue-50 transition-all duration-300 hover:scale-105 border-2 border-blue-200 text-blue-700 hover:text-blue-800"
                         onClick={() => handleDischargeSummary(bed.id)}
                       >
-                        <FileText className="w-3 h-3 mr-1 flex-shrink-0" />
-                        <span className="truncate">Discharge</span>
+                        <FileText className="w-3 h-3 mr-1" />
+                        <span>Discharge</span>
                       </Button>
                     </div>
                   </div>
